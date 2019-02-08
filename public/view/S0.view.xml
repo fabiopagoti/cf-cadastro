@@ -1,0 +1,40 @@
+<mvc:View controllerName="ovly.beta.users.beta-users.controller.S0" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:l="sap.ui.layout" 
+	xmlns:f="sap.ui.layout.form" displayBlock="true" 
+	xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Panel expandable="true" expanded="false" headerText="Usuários Beta" class="sapUiResponsiveMargin">
+						<content>
+							<List items="{users>/betaUsers}">
+								<items>
+									<StandardListItem title="{users>name}" description="{users>email}" />
+								</items>
+							</List>
+						</content>
+					</Panel>
+
+					<f:SimpleForm editable="true" layout="ResponsiveGridLayout" title="Inscreva-se" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+						<f:content>
+							<Label text="Name" />
+							<Input id="name" value="{form>/name}" />
+							<Label text="E-mail" />
+							<Input value="{form>/email}">
+							</Input>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer />
+						<Button icon="sap-icon://save" press="onSave" text="Save" type="Emphasized" />
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

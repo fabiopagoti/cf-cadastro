@@ -25,10 +25,6 @@ app.get('/hello', function (req, res) {
     res.send('Hello World!');
 });
 
-app.get('/', function (req, res) {
-    res.send('UI5 app');
-});
-
 app.post('/subscriber', function (req, res) {
     const text = 'INSERT  INTO "public"."users" VALUES ($1, $2, NOW()) ON CONFLICT DO NOTHING RETURNING *';
 

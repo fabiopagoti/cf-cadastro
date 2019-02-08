@@ -4,7 +4,6 @@ applications:
   random-route: true
   memory: 64M
   disk_quota: 128M
-  random-route: true
   buildpack: nodejs_buildpack
   health-check-type: port
   env:
